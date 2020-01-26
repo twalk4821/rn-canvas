@@ -9,7 +9,8 @@ interface Props {
   height: number,
   tabStart: number
   tabHeight: number,
-  tabRadius: number
+  tabRadius: number,
+  tabWidth: number
 }
 
 class Tab extends React.PureComponent<Props> implements AnimatedShape {
@@ -19,12 +20,12 @@ class Tab extends React.PureComponent<Props> implements AnimatedShape {
     height: 100,
     tabStart: 100,
     tabHeight: 25,
-    tabRadius: 25
+    tabRadius: 25,
+    tabWidth: 25
   }
 
   drawPath = () => {
-    const { width, height, tabStart, tabHeight, tabRadius } = this.props;
-    const tabWidth = width / 2
+    const { width, height, tabStart, tabHeight, tabRadius, tabWidth } = this.props;
     return new Path()
       .moveTo(0, 0)
       .lineTo(width, 0)

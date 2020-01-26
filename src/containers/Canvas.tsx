@@ -22,7 +22,7 @@ class Canvas extends React.PureComponent<Props> {
   render() {
     const { width, height, children } = this.props;
     return (
-      <View style={[style.canvas, {width: width + 4, height: height + 4}]}>
+      <View style={[style.canvas, {width: width + 2, height: height + 2}]}>
         <Surface width={width} height={height}>{children}</Surface>
       </View>
     );
